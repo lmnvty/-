@@ -1,12 +1,17 @@
 放宽了啥
+提高手机性能50度以下cpu不会降频
+性能开销0.338几乎可以忽略不计
+满血充电什么的
+小米红米通用
 
 项目	节点	改法
 CPU 免温控上限	thermal_message/cpu_nolimit_temp	48000 改 50000
-WiFi 过热降速	thermal_message/wifi_limit	1 改 0
-温控降亮度	thermal_message/thermal_max_brightness	1 改 0
-背光	backlight/.../brightness	拉满 4095
-商店下载限速	thermal_message/market_download_limit	1 改 0
-充电温度限流	cooling_device/battery/cur_state	拉到 max_state
+
+      WiFi 过热降速	thermal_message/wifi_limit	1 改 0
+      温控降亮度	thermal_message/thermal_max_brightness	1 改 0
+      背光	backlight/.../brightness	拉满 4095
+      商店下载限速	thermal_message/market_download_limit	1 改 0
+      充电温度限流	cooling_device/battery/cur_state	拉到 max_state
 
 充电那条只是去掉温度对电流的压制，硬件本身的电流电压上限没动
 
